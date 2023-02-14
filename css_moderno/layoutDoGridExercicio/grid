@@ -1,0 +1,11 @@
+grid e um layout de display definido por linhas e colunas:
+
+no container utilizar display:grid; para habilitar
+
+grid-template-columns: utilizado para criar as colunas do grid ( evite usar px e % de preferencia por fr( fração da view) suporta mistura de valores, e também aceita valores quebrados como 1.6fr
+
+gap: como o nome diz e a distancia entre linhas e colunas recebe dois valores um para cada
+
+grid-template-rows: usado para criar linhas ( evite usar px e % de preferencia por fr( fração da view) suporta mistura de valores, e também aceita valores quebrados como 1.6fr
+
+ grid-auto-rows: minmax(210px, 100%): usado para criar de modo automático as linhas com as especificações selecionadas

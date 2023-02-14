@@ -1,0 +1,23 @@
+comandos flex
+
+flex-direction: indica o alinhamento que os itens terão por padrão no flex e Row(linha)
+
+gap: distancia entre os elementos afetados pelo flex pode ser row ou colunn
+
+flex-wrap: define como será a quebra dos elementos flex
+
+align-items: controla o alinhamento vertical dos itens
+
+justify-content: controla o alinhamento horizontal
+
+flex-basis: controla o tamanho width do elemento flex para ser usando com grow e shirink
+
+flex-grow: controla o aumento dos itens sem modificado a quebra da pagina, onde eles iram ocupar todos espaço e s terá a quebra no valor do flex-basis.
+
+flex-shrin: controla a diminuição dos itens  o valor padrão dele 1, quando substituímos para 2 o elemento ira diminuir primeiro no que os outro elementos.
+
+flex: e o encurtamento do grow shrink e basis: flex(valor grow) (valor shirink) (valor basis)
+
+order: e a ordem que os elementos ficam alinhados
+
+ align-self: e o alinhamento de um único elemento na vertical</div></div>

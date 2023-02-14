@@ -1,0 +1,45 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../../img/backgroundLp.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  color: #fff;
+}
+
+
+.container1{
+  background-color: $background-color;
+  width: 450px;
+  height: auto;
+}
+
+
+.toplogo{
+  width: 185px;
+}
+
+.paragraph{
+  margin: 6px 0px;
+}
+
+.btnSend{
+  color: $button-color;
+  border: 1px solid $button-color;
+
+
+  &:hover{
+    background-color: $button-color;
+    color: #fff;
+  }
+}
+
+.footer{
+  margin-top: 30px;
+  margin-bottom: -30px;
+}

@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  height: 100vh;
+  background-color: white;
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */
