@@ -34,8 +34,16 @@ router.post('/', async (req, res) => {
     res.redirect('/checklist')   
   } catch (error) {
     res.status(422).render('checklists/new', { checklist: {...checklist, error}})
+  }  
+})
+
+router.get('/:id/edit', async(req, res) =>{
+  try {
+    let checklist = await Checklist.findById(req.params.id)
+    res.status(200).render('checklists/edit', {checklist: checklist})
+  } catch (error) {
+    res.status(500).render('pages/error', {error: 'Erro ao exibir a edição Listas de tarefas'})    
   }
-  
 })
 
 router.get('/:id', async (req, res) => {
@@ -48,12 +56,15 @@ router.get('/:id', async (req, res) => {
 })
 
 router.put('/:id', async(req, res) => {
-  let {name} = req.body
+  let { name } = req.body.checklist;
+  let checklist = await Checklist.findById(req.params.id)
+
   try {
-    let checklist = await Checklist.findByIdAndUpdate(req.params.id, {name}, {new: true})    
-    res.status(200).json(checklist)    
+     await checklist.update({name})    
+     res.redirect('/checklist')    
   } catch (error) {
-    res.status(422).json(error)   
+    let errors = error.errors
+    res.status(422).render('checklists/edit', {checklist: {...checklist, errors}})
   }
   
 })
